@@ -1,0 +1,43 @@
+
+body {
+    text-align: center;
+    margin: 200px 500px;
+    font-family: 'Lato', sans-serif;
+}
+
+h1 {
+    text-transform: uppercase;
+}
+
+.disabled {
+    pointer-events:none;
+    background-color: #ddd;
+}
+
+#play {
+    background-color: rgb(88, 142, 224);
+    padding: 10px;
+    border-radius: 3px;
+    border-color: rgb(88, 142, 224);
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #fff;
+    margin-left: 10px;
+}
+
+p {
+    font-size: 20px;
+}
+
+#number {
+    padding: 10px;  
+}
+
+#replay {
+    opacity: 0;
+    background-color: rgb(157, 230, 90);
+    border-radius: 3px;
+    border-color: rgb(157, 230, 90);
+    padding: 10px;
+    text-transform: uppercase;
+}
