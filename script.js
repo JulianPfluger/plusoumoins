@@ -2,9 +2,22 @@ let number = document.querySelector("#number");
 let play = document.querySelector("#play");
 let reponse = document.querySelector("#reponse");
 let replay = document.querySelector("#replay");
+let maxtry = 20;
 const NO_OF_HIGH_SCORES = 10;
 const HIGH_SCORES = 'highScores';
 
+function changeDifficulty(diff)
+{
+    if(diff == 'easy'){
+        maxtry = 150
+    }
+    else if(diff == 'normal'){
+        maxtry = 20
+    }
+    else{
+        maxtry = 5
+    }
+}
 
 function getRandomInt(max) {
     return Math.floor(Math.random() * Math.floor(max));
@@ -18,7 +31,7 @@ function compare() {
 
     compt++;
 
-    if (compt < 10 || number.value == trueNumber) {
+    if (compt < maxtry || number.value == trueNumber) {
         if (number.value <= 100 && number.value >= 0 && number.value != "") {
 
             if (number.value < trueNumber) {
@@ -98,3 +111,4 @@ function reload() {
     replay.style.opacity = 0;
     document.location.reload(true);
 }
+
